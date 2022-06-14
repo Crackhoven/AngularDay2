@@ -23,19 +23,19 @@ export class HomePageComponent implements OnInit {
       age: 4
     }
   ]
-info = new FormGroup({
+  vehicle = new FormGroup({
     name: new FormControl('',Validators.required),
     model: new FormControl('',Validators.required),
     age:new FormControl('',Validators.required),
 
   });
-   onSubmit(){
-     if(this.info.valid){
-    let a:any = this.info.value;
-    console.log(a)
-    this.cars.push(a)
-   }
+  onClick(){
+    if(this.vehicle.valid){
+   let a:any = this.vehicle.value;
+   console.log(a)
+   this.cars.push(a)
   }
+ }
   constructor() { }
 
   

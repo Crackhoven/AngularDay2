@@ -11,13 +11,14 @@
 </div>
 
 <div class="container">
-    <form [formGroup]="info" (ngSubmit)="onSubmit()">
+    <h1>Add a new car</h1>
+    <form [formGroup]="vehicle" (ngSubmit)="onClick()">
         <label for="name">Name</label><br>
         <input type="text" placeholder="Enter name" formControlName="name"><br>
-        <label for=" age">Age</label><br>
+        <label for=" age">Model</label><br>
         <input type="text" placeholder="Enter name" formControlName="model"><br>
-        <label for="email">Email</label><br>
-        <input type="text" placeholder="email@example.com" formControlName="age"><br>
+        <label for="email">Age</label><br>
+        <input type="text" placeholder="Enter Age" formControlName="age"><br>
         <input type="submit" value="Submit" class="btn btn-danger ">
     </form>
 </div>
