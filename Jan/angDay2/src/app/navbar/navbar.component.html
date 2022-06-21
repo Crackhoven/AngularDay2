@@ -16,12 +16,12 @@
             </li>
             <ng-template [ngIf]="clickCounter>200" [ngIfElse]="badPerson">
                 <li class="nav-item">
-                    <p>You're a VIP!</p>
+                    <p class="nav-link">scammed lol</p>
                 </li>
             </ng-template>
             <ng-template #badPerson>
                 <li class="nav-item">
-                    <p>You should be ashamed of yourself. Give us money.</p>
+                    <p class="nav-link">You should be ashamed of yourself. Give us money.</p>
                 </li>
             </ng-template>
         </ul>

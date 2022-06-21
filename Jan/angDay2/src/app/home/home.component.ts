@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,19 @@ export class HomeComponent implements OnInit {
       age: 12
     }
   ]
+
+  catBuilder = new FormGroup({
+    name: new FormControl('', Validators.required),
+    age: new FormControl('',[Validators.required, Validators.pattern("^[0-9]*$")]),
+  })
+
+  catSubmit(){
+    if(this.catBuilder.valid){
+      let a: any = this.catBuilder.value;
+      console.log(a);
+      this.cars.push(a);
+   }
+  }
   constructor() { }
 
   ngOnInit(): void {

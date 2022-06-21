@@ -7,4 +7,17 @@
             </div>
         </div>
     </div>
+    <div>
+        <form [formGroup]="catBuilder" (ngSubmit)="catSubmit()" class="mt-2">
+            <label>Name:</label>
+            <br>
+            <input type="text" formControlName="name">
+            <br>
+            <label>Age:</label>
+            <br>
+            <input type="text" formControlName="age">
+            <br>
+            <input type="submit" class="btn btn-primary mt-2" value="Submit">
+        </form>
+    </div>
 </div>
